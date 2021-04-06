@@ -1,0 +1,1434 @@
+[02-May-2020 06:55:42 UTC] Galat basis data WordPress Unknown column 'cr.class_id' in 'on clause' untuk kueri SELECT 	s.student_id,
+						s.name,
+						c.name as class_name,
+						b.name as branch_name
+				FROM ak_course_report as cr
+					LEFT JOIN ak_students as s 
+						ON s.student_id = cr.student_id
+					LEFT JOIN ak_class as c
+						ON s.class_id = cr.class_id
+					LEFT JOIN ak_branch as b
+						ON s.branch_id = cr.branch_id
+		 LIMIT 20 OFFSET 0 yang dibuat oleh require_once('wp-admin/admin.php'), do_action('course_page_course-report'), WP_Hook->do_action, WP_Hook->apply_filters, course_report_page_handler, Course_Report_List->prepare_items, Course_Report_List->get_course_report
+[02-May-2020 06:55:55 UTC] Galat basis data WordPress Unknown column 'cr.branch_id' in 'on clause' untuk kueri SELECT 	s.student_id,
+						s.name,
+						c.name as class_name,
+						b.name as branch_name
+				FROM ak_course_report as cr
+					LEFT JOIN ak_students as s 
+						ON s.student_id = cr.student_id
+					LEFT JOIN ak_class as c
+						ON s.class_id = c.class_id
+					LEFT JOIN ak_branch as b
+						ON s.branch_id = cr.branch_id
+		 LIMIT 20 OFFSET 0 yang dibuat oleh require_once('wp-admin/admin.php'), do_action('course_page_course-report'), WP_Hook->do_action, WP_Hook->apply_filters, course_report_page_handler, Course_Report_List->prepare_items, Course_Report_List->get_course_report
+[02-May-2020 06:58:59 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN ak_students as s 
+					LEFT JOIN ak_class as c
+						ON s.class_id = c.cl' at line 5 untuk kueri SELECT 	s.student_id,
+						s.name,
+						c.name as class_name,
+						b.name as branch_name
+				FROM JOIN ak_students as s 
+					LEFT JOIN ak_class as c
+						ON s.class_id = c.class_id
+					LEFT JOIN ak_branch as b
+						ON s.branch_id = b.branch_id
+		 yang dibuat oleh require_once('wp-admin/admin.php'), do_action('course_page_course-report'), WP_Hook->do_action, WP_Hook->apply_filters, course_report_page_handler, Course_Report_List->prepare_items, Course_Report_List->record_count
+[02-May-2020 06:58:59 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN ak_students as s 
+					LEFT JOIN ak_class as c
+						ON s.class_id = c.cl' at line 5 untuk kueri SELECT 	s.student_id,
+						s.name,
+						c.name as class_name,
+						b.name as branch_name
+				FROM JOIN ak_students as s 
+					LEFT JOIN ak_class as c
+						ON s.class_id = c.class_id
+					LEFT JOIN ak_branch as b
+						ON s.branch_id = b.branch_id
+		 LIMIT 20 OFFSET 0 yang dibuat oleh require_once('wp-admin/admin.php'), do_action('course_page_course-report'), WP_Hook->do_action, WP_Hook->apply_filters, course_report_page_handler, Course_Report_List->prepare_items
+[02-May-2020 07:18:47 UTC] Galat basis data WordPress Table 'u5740434_app32.ak_post' doesn't exist untuk kueri SELECT 	p.post_title
+
+				FROM ak_post as p
+					LEFT JOIN ak_postmeta as pm
+						ON p.ID = pm.post_id
+					WHERE p.post_type = 'course' AND p.post_status = 'publish'
+		 yang dibuat oleh require_once('wp-admin/admin.php'), do_action('course_page_course-report'), WP_Hook->do_action, WP_Hook->apply_filters, course_report_page_handler, Course_Report_List->prepare_items, Course_Report_List->record_count
+[02-May-2020 07:18:47 UTC] Galat basis data WordPress Table 'u5740434_app32.ak_post' doesn't exist untuk kueri SELECT 	p.post_title
+
+				FROM ak_post as p
+					LEFT JOIN ak_postmeta as pm
+						ON p.ID = pm.post_id
+					WHERE p.post_type = 'course' AND p.post_status = 'publish'
+		 LIMIT 20 OFFSET 0 yang dibuat oleh require_once('wp-admin/admin.php'), do_action('course_page_course-report'), WP_Hook->do_action, WP_Hook->apply_filters, course_report_page_handler, Course_Report_List->prepare_items
+[02-May-2020 20:10:37 UTC] Galat basis data WordPress Table 'u5740434_app32.cr' doesn't exist untuk kueri 
+			SELECT s.name,
+					cr.content,
+					cr.image
+			FROM  cr 
+				LEFT JOIN ak_students s
+					ON cr.student_id = s.student_id
+			WHERE course_id = '330'
+		 yang dibuat oleh do_action('wp_ajax_export_excel_course_report'), WP_Hook->do_action, WP_Hook->apply_filters, export_excel_course_report_cb
+[02-May-2020 20:11:13 UTC] Galat basis data WordPress Unknown column 'cr.image' in 'field list' untuk kueri 
+			SELECT s.name,
+					cr.content,
+					cr.image
+			FROM ak_course_report cr 
+				LEFT JOIN ak_students s
+					ON cr.student_id = s.student_id
+			WHERE course_id = '330'
+		 yang dibuat oleh do_action('wp_ajax_export_excel_course_report'), WP_Hook->do_action, WP_Hook->apply_filters, export_excel_course_report_cb
+[03-May-2020 01:57:10 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ROUP BY s.student_id ORDER BY s.name' at line 26 untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id  as class_id,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_daily r 
+						ON s.student_id = r.student_id AND r.date = '2020-05-03'
+					LEFT OUTER JOIN ak_reports_daily_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+				WHERE 	s.class_id = '1' AND
+						s.branch_id = '26'
+				ROUP BY s.student_id ORDER BY s.name
+	 yang dibuat oleh do_action('wp_ajax_export_excel_daily_report'), WP_Hook->do_action, WP_Hook->apply_filters, export_excel_daily_report_cb
+[03-May-2020 02:53:21 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's.class_id = '1'
+			 GROUP BY s.student_id ORDER BY s.name' at line 20 untuk kueri SELECT 	s.student_id as student_id,
+					s.name as name,
+					s.number as number,
+					s.branch_id as branch_id,
+					b.name as branch_name,
+					c.name as class_name,
+					s.class_id as class_id,
+					MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+					MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01' ,'%Y-%m-01')  END) AS period,
+					MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+					MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+			FROM ak_students s 
+			LEFT OUTER JOIN ak_payment p 
+					ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+			LEFT OUTER JOIN ak_branch b 
+					ON s.branch_id = b.branch_id
+			LEFT OUTER JOIN ak_class c 
+					ON s.class_id = c.class_id
+			WHERE s.branch_id = '26' s.class_id = '1'
+			 GROUP BY s.student_id ORDER BY s.name
+	 yang dibuat oleh do_action('wp_ajax_export_excel_payment'), WP_Hook->do_action, WP_Hook->apply_filters, export_excel_payment_cb
+[04-May-2020 09:30:04 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_i' at line 2 untuk kueri 
+		    	SELECT DISTINCT meta_value, post_title;
+					FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_id = tr.object_id
+					WHERE tr.term_taxonomy_id = 25 
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'class_id') = 1
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'level') IS NOT null
+					AND meta_key='level'
+		    	 yang dibuat oleh edit_post, wp_update_post, wp_insert_post, do_action('save_post'), WP_Hook->do_action, WP_Hook->apply_filters, save_post_course_meta
+[04-May-2020 09:30:08 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_i' at line 2 untuk kueri 
+		    	SELECT DISTINCT meta_value, post_title;
+					FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_id = tr.object_id
+					WHERE tr.term_taxonomy_id = 25 
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'class_id') = 1
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'level') IS NOT null
+					AND meta_key='level'
+		    	 yang dibuat oleh edit_post, wp_update_post, wp_insert_post, do_action('save_post'), WP_Hook->do_action, WP_Hook->apply_filters, save_post_course_meta
+[04-May-2020 09:30:18 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_i' at line 2 untuk kueri 
+		    	SELECT DISTINCT meta_value, post_title;
+					FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_id = tr.object_id
+					WHERE tr.term_taxonomy_id = 25 
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'class_id') = 1
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'level') IS NOT null
+					AND meta_key='level'
+		    	 yang dibuat oleh edit_post, wp_update_post, wp_insert_post, do_action('save_post'), WP_Hook->do_action, WP_Hook->apply_filters, save_post_course_meta
+[04-May-2020 09:30:29 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_i' at line 2 untuk kueri 
+		    	SELECT DISTINCT meta_value, post_title;
+					FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_id = tr.object_id
+					WHERE tr.term_taxonomy_id = 25 
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'class_id') = 1
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'level') IS NOT null
+					AND meta_key='level'
+		    	 yang dibuat oleh edit_post, wp_update_post, wp_insert_post, do_action('save_post'), WP_Hook->do_action, WP_Hook->apply_filters, save_post_course_meta
+[04-May-2020 09:47:01 UTC] Galat basis data WordPress Unknown column 'p.post_id' in 'on clause' untuk kueri 
+		    	SELECT meta_value, post_id
+					FROM ak_postmeta pm
+					left join ak_term_relationships tr
+						ON pm.post_id = tr.object_id
+					left join ak_posts p
+						ON pm.post_id = p.post_id
+					WHERE tr.term_taxonomy_id = 25 
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'class_id') = 1
+					AND (select meta_value from ak_postmeta where post_id = pm.post_id and meta_key = 'level') IS NOT null
+					AND meta_key='level' AND p.post_status = 'publish'
+		    	 yang dibuat oleh edit_post, wp_update_post, wp_insert_post, do_action('save_post'), WP_Hook->do_action, WP_Hook->apply_filters, save_post_course_meta
+[04-May-2020 16:51:24 UTC] Galat basis data WordPress Unknown column 'rds.points_i' in 'on clause' untuk kueri SELECT rdp.points_id as points_id
+				FROM ak_reports_daily_points rdp
+					LEFT JOIN ak_reports_daily_score rds
+						ON rdp.points_id = rds.points_i yang dibuat oleh do_action('wp_ajax_export_excel_daily_report'), WP_Hook->do_action, WP_Hook->apply_filters, export_excel_daily_report_cb
+[05-May-2020 05:41:33 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT O' at line 16 untuk kueri  
+	    			SELECT 	u.ID as ID,
+						    u.user_login AS user_login,
+						    u.user_pass AS user_pass,
+						    u.user_email AS user_email,
+						    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_place' limit 1) as birth_place,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_date' limit 1) as birth_date,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'religion' limit 1) as religion,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'education' limit 1) as education,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'social_media' limit 1) as social_media,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'occupation' limit 1) as occupation,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'office_address' limit 1) as office_address
+							GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT OUTER JOIN ak_parents_students ps
+							ON u.ID = ps.parent_id
+					WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+					AND u.ID = 166 
+				 yang dibuat oleh do_action('orang-tua_page_parents_add'), WP_Hook->do_action, WP_Hook->apply_filters, parents_new_page_handler
+[05-May-2020 05:41:58 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT O' at line 16 untuk kueri  
+	    			SELECT 	u.ID as ID,
+						    u.user_login AS user_login,
+						    u.user_pass AS user_pass,
+						    u.user_email AS user_email,
+						    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_place' limit 1) as birth_place,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_date' limit 1) as birth_date,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'religion' limit 1) as religion,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'education' limit 1) as education,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'social_media' limit 1) as social_media,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'occupation' limit 1) as occupation,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'office_address' limit 1) as office_address
+							GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT OUTER JOIN ak_parents_students ps
+							ON u.ID = ps.parent_id
+					WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+					AND u.ID = 166 
+				 yang dibuat oleh do_action('orang-tua_page_parents_add'), WP_Hook->do_action, WP_Hook->apply_filters, parents_new_page_handler
+[05-May-2020 06:25:44 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT O' at line 16 untuk kueri  
+	    			SELECT 	u.ID as ID,
+						    u.user_login AS user_login,
+						    u.user_pass AS user_pass,
+						    u.user_email AS user_email,
+						    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_place' limit 1) as birth_place,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_date' limit 1) as birth_date,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'religion' limit 1) as religion,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'education' limit 1) as education,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'social_media' limit 1) as social_media,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'occupation' limit 1) as occupation,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'office_address' limit 1) as office_address
+							GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT OUTER JOIN ak_parents_students ps
+							ON u.ID = ps.parent_id
+					WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+					AND u.ID = 175 
+				 yang dibuat oleh do_action('orang-tua_page_parents_add'), WP_Hook->do_action, WP_Hook->apply_filters, parents_new_page_handler
+[06-May-2020 08:16:06 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT O' at line 16 untuk kueri  
+	    			SELECT 	u.ID as ID,
+						    u.user_login AS user_login,
+						    u.user_pass AS user_pass,
+						    u.user_email AS user_email,
+						    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_place' limit 1) as birth_place,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_date' limit 1) as birth_date,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'religion' limit 1) as religion,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'education' limit 1) as education,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'social_media' limit 1) as social_media,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'occupation' limit 1) as occupation,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'office_address' limit 1) as office_address
+							GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT OUTER JOIN ak_parents_students ps
+							ON u.ID = ps.parent_id
+					WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+					AND u.ID = 108 
+				 yang dibuat oleh do_action('orang-tua_page_parents_add'), WP_Hook->do_action, WP_Hook->apply_filters, parents_new_page_handler
+[06-May-2020 08:16:35 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT O' at line 16 untuk kueri  
+	    			SELECT 	u.ID as ID,
+						    u.user_login AS user_login,
+						    u.user_pass AS user_pass,
+						    u.user_email AS user_email,
+						    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_place' limit 1) as birth_place,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_date' limit 1) as birth_date,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'religion' limit 1) as religion,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'education' limit 1) as education,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'social_media' limit 1) as social_media,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'occupation' limit 1) as occupation,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'office_address' limit 1) as office_address
+							GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT OUTER JOIN ak_parents_students ps
+							ON u.ID = ps.parent_id
+					WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+					AND u.ID = 108 
+				 yang dibuat oleh do_action('orang-tua_page_parents_add'), WP_Hook->do_action, WP_Hook->apply_filters, parents_new_page_handler
+[06-May-2020 09:38:52 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT O' at line 16 untuk kueri  
+	    			SELECT 	u.ID as ID,
+						    u.user_login AS user_login,
+						    u.user_pass AS user_pass,
+						    u.user_email AS user_email,
+						    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_place' limit 1) as birth_place,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'birth_date' limit 1) as birth_date,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'religion' limit 1) as religion,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'education' limit 1) as education,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'social_media' limit 1) as social_media,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'occupation' limit 1) as occupation,
+							(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'office_address' limit 1) as office_address
+							GROUP_CONCAT(ps.student_id) as student_id
+					FROM ak_users as u
+						LEFT OUTER JOIN ak_parents_students ps
+							ON u.ID = ps.parent_id
+					WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+					AND u.ID = 58 
+				 yang dibuat oleh do_action('orang-tua_page_parents_add'), WP_Hook->do_action, WP_Hook->apply_filters, parents_new_page_handler
+[30-May-2020 07:21:28 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.paym' at line 7 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,s
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > '2020-05-01'
+		 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[30-May-2020 07:21:28 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.paym' at line 7 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,s
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > '2020-05-01'
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[30-May-2020 07:23:25 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '14:23:25
+		 GROUP BY s.student_id  ORDER BY s.name ASC' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:23:25' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > 2020-05-01 14:23:25
+		 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[30-May-2020 07:23:25 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '14:23:25
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:23:25' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > 2020-05-01 14:23:25
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[30-May-2020 07:23:27 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '14:23:27
+		 GROUP BY s.student_id  ORDER BY s.name ASC' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:23:27' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > 2020-05-01 14:23:27
+		 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[30-May-2020 07:23:27 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '14:23:27
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:23:27' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > 2020-05-01 14:23:27
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[30-May-2020 07:23:36 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '14:23:36
+		 GROUP BY s.student_id  ORDER BY s.name ASC' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:23:36' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > 2020-05-01 14:23:36
+		 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[30-May-2020 07:23:36 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '14:23:36
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:23:36' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > 2020-05-01 14:23:36
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[30-May-2020 07:23:56 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '14:23:56
+		 GROUP BY s.student_id  ORDER BY s.name ASC' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:23:56' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > 2020-05-01 14:23:56
+		 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[30-May-2020 07:23:56 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '14:23:56
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:23:56' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE u.user_registered > 2020-05-01 14:23:56
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[30-May-2020 07:27:17 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND u.user_registered > '2020-05-01 14:27:17'
+				WHERE u.user_registered <= '2' at line 23 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:27:17' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id --AND u.user_registered > '2020-05-01 14:27:17'
+				WHERE u.user_registered <= '2020-05-01 14:27:17'
+		 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[30-May-2020 07:27:17 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND u.user_registered > '2020-05-01 14:27:17'
+				WHERE u.user_registered <= '2' at line 23 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-01 14:27:17' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id --AND u.user_registered > '2020-05-01 14:27:17'
+				WHERE u.user_registered <= '2020-05-01 14:27:17'
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[30-May-2020 07:51:47 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's.name LIKE '%%' AND s.class_id LIKE '%%' AND s.branch_id LIKE '%%' AND p.status' at line 25 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-30' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2020-05-30') AND year(p.period) = year('2020-05-30')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE month(u.user_registered) <= month('2020-05-30') and year(u.user_registered) <= year('2020-05-30')
+		s.name LIKE '%%' AND s.class_id LIKE '%%' AND s.branch_id LIKE '%%' AND p.status = '1'  GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[30-May-2020 07:51:47 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's.name LIKE '%%' AND s.class_id LIKE '%%' AND s.branch_id LIKE '%%' AND p.status' at line 25 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-05-30' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2020-05-30') AND year(p.period) = year('2020-05-30')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE month(u.user_registered) <= month('2020-05-30') and year(u.user_registered) <= year('2020-05-30')
+		s.name LIKE '%%' AND s.class_id LIKE '%%' AND s.branch_id LIKE '%%' AND p.status = '1'  GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[04-Jun-2020 06:48:56 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY u.ID' at line 22 untuk kueri SELECT 	u.ID as ID,
+					    u.user_login AS user_login,
+					    u.user_pass AS user_pass,
+					    u.user_email AS user_email,
+					    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+						s.name,
+						s.number,
+						b.branch_id
+
+				FROM ak_users as u
+					LEFT OUTER JOIN ak_parents_students ps
+						ON u.ID = ps.parent_id
+                    LEFT JOIN ak_students s
+						ON ps.student_id = s.student_id
+					LEFT JOIN ak_branch b
+						ON s.branch_id = b.branch_id
+				WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+				
+		 ORDER BY first_name desc, last_name desc GROUP BY u.ID yang dibuat oleh do_action('toplevel_page_parents'), WP_Hook->do_action, WP_Hook->apply_filters, parents_page_handler, Parents_List->prepare_items, Parents_List->record_count
+[04-Jun-2020 06:48:56 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY u.ID LIMIT 20 OFFSET 0' at line 22 untuk kueri SELECT 	u.ID as ID,
+					    u.user_login AS user_login,
+					    u.user_pass AS user_pass,
+					    u.user_email AS user_email,
+					    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+						s.name,
+						s.number,
+						b.branch_id
+
+				FROM ak_users as u
+					LEFT OUTER JOIN ak_parents_students ps
+						ON u.ID = ps.parent_id
+                    LEFT JOIN ak_students s
+						ON ps.student_id = s.student_id
+					LEFT JOIN ak_branch b
+						ON s.branch_id = b.branch_id
+				WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+				
+		 ORDER BY first_name desc, last_name desc GROUP BY u.ID LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_parents'), WP_Hook->do_action, WP_Hook->apply_filters, parents_page_handler, Parents_List->prepare_items
+[04-Jun-2020 06:48:56 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY u.ID' at line 22 untuk kueri SELECT 	u.ID as ID,
+					    u.user_login AS user_login,
+					    u.user_pass AS user_pass,
+					    u.user_email AS user_email,
+					    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+						s.name,
+						s.number,
+						b.branch_id
+
+				FROM ak_users as u
+					LEFT OUTER JOIN ak_parents_students ps
+						ON u.ID = ps.parent_id
+                    LEFT JOIN ak_students s
+						ON ps.student_id = s.student_id
+					LEFT JOIN ak_branch b
+						ON s.branch_id = b.branch_id
+				WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+				
+		 ORDER BY first_name desc, last_name desc GROUP BY u.ID yang dibuat oleh do_action('toplevel_page_parents'), WP_Hook->do_action, WP_Hook->apply_filters, parents_page_handler, Parents_List->record_count
+[04-Jun-2020 06:48:56 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY u.ID' at line 22 untuk kueri SELECT 	u.ID as ID,
+					    u.user_login AS user_login,
+					    u.user_pass AS user_pass,
+					    u.user_email AS user_email,
+					    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+						s.name,
+						s.number,
+						b.branch_id
+
+				FROM ak_users as u
+					LEFT OUTER JOIN ak_parents_students ps
+						ON u.ID = ps.parent_id
+                    LEFT JOIN ak_students s
+						ON ps.student_id = s.student_id
+					LEFT JOIN ak_branch b
+						ON s.branch_id = b.branch_id
+				WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+				
+		 ORDER BY first_name desc, last_name desc GROUP BY u.ID yang dibuat oleh do_action('toplevel_page_parents'), WP_Hook->do_action, WP_Hook->apply_filters, parents_page_handler, Parents_List->record_count
+[04-Jun-2020 06:49:12 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY u.ID' at line 22 untuk kueri SELECT 	u.ID as ID,
+					    u.user_login AS user_login,
+					    u.user_pass AS user_pass,
+					    u.user_email AS user_email,
+					    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+						s.name,
+						s.number,
+						b.branch_id
+
+				FROM ak_users as u
+					LEFT OUTER JOIN ak_parents_students ps
+						ON u.ID = ps.parent_id
+                    LEFT JOIN ak_students s
+						ON ps.student_id = s.student_id
+					LEFT JOIN ak_branch b
+						ON s.branch_id = b.branch_id
+				WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+				
+		 ORDER BY user_email desc GROUP BY u.ID yang dibuat oleh do_action('toplevel_page_parents'), WP_Hook->do_action, WP_Hook->apply_filters, parents_page_handler, Parents_List->prepare_items, Parents_List->record_count
+[04-Jun-2020 06:49:12 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY u.ID LIMIT 20 OFFSET 0' at line 22 untuk kueri SELECT 	u.ID as ID,
+					    u.user_login AS user_login,
+					    u.user_pass AS user_pass,
+					    u.user_email AS user_email,
+					    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+						s.name,
+						s.number,
+						b.branch_id
+
+				FROM ak_users as u
+					LEFT OUTER JOIN ak_parents_students ps
+						ON u.ID = ps.parent_id
+                    LEFT JOIN ak_students s
+						ON ps.student_id = s.student_id
+					LEFT JOIN ak_branch b
+						ON s.branch_id = b.branch_id
+				WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+				
+		 ORDER BY user_email desc GROUP BY u.ID LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_parents'), WP_Hook->do_action, WP_Hook->apply_filters, parents_page_handler, Parents_List->prepare_items
+[04-Jun-2020 06:49:12 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY u.ID' at line 22 untuk kueri SELECT 	u.ID as ID,
+					    u.user_login AS user_login,
+					    u.user_pass AS user_pass,
+					    u.user_email AS user_email,
+					    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+						s.name,
+						s.number,
+						b.branch_id
+
+				FROM ak_users as u
+					LEFT OUTER JOIN ak_parents_students ps
+						ON u.ID = ps.parent_id
+                    LEFT JOIN ak_students s
+						ON ps.student_id = s.student_id
+					LEFT JOIN ak_branch b
+						ON s.branch_id = b.branch_id
+				WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+				
+		 ORDER BY user_email desc GROUP BY u.ID yang dibuat oleh do_action('toplevel_page_parents'), WP_Hook->do_action, WP_Hook->apply_filters, parents_page_handler, Parents_List->record_count
+[04-Jun-2020 06:49:12 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY u.ID' at line 22 untuk kueri SELECT 	u.ID as ID,
+					    u.user_login AS user_login,
+					    u.user_pass AS user_pass,
+					    u.user_email AS user_email,
+					    (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'first_name' limit 1) as first_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'last_name' limit 1) as last_name,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'address' limit 1) as address,
+						(select meta_value from ak_usermeta where user_id = u.id and meta_key = 'phone' limit 1) as phone,
+						s.name,
+						s.number,
+						b.branch_id
+
+				FROM ak_users as u
+					LEFT OUTER JOIN ak_parents_students ps
+						ON u.ID = ps.parent_id
+                    LEFT JOIN ak_students s
+						ON ps.student_id = s.student_id
+					LEFT JOIN ak_branch b
+						ON s.branch_id = b.branch_id
+				WHERE (select meta_value from ak_usermeta where user_id = u.id and meta_key = 'ak_capabilities' limit 1) LIKE '%parent%'
+				
+		 ORDER BY user_email desc GROUP BY u.ID yang dibuat oleh do_action('toplevel_page_parents'), WP_Hook->do_action, WP_Hook->apply_filters, parents_page_handler, Parents_List->record_count
+[16-Jun-2020 23:30:31 UTC] Galat basis data WordPress Column 'address' in order clause is ambiguous untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id  as class_id,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_daily r 
+						ON s.student_id = r.student_id AND r.date = CURRENT_DATE
+					LEFT OUTER JOIN ak_reports_daily_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+		 GROUP BY s.student_id  ORDER BY address desc yang dibuat oleh do_action('toplevel_page_reports_daily'), WP_Hook->do_action, WP_Hook->apply_filters, report_daily_page_handler, Report_Daily_List->prepare_items, Report_Daily_List->record_count
+[16-Jun-2020 23:30:31 UTC] Galat basis data WordPress Column 'address' in order clause is ambiguous untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id  as class_id,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_daily r 
+						ON s.student_id = r.student_id AND r.date = CURRENT_DATE
+					LEFT OUTER JOIN ak_reports_daily_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+		 GROUP BY s.student_id  ORDER BY address desc LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_reports_daily'), WP_Hook->do_action, WP_Hook->apply_filters, report_daily_page_handler, Report_Daily_List->prepare_items
+[16-Jun-2020 23:32:58 UTC] Galat basis data WordPress Column 'address' in order clause is ambiguous untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						s.class_id  as class_id,
+						b.name  as branch_name,
+						c.name  as class_name,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_weekly r 
+						ON s.student_id = r.student_id AND r.date = ( '2020-06-17' - INTERVAL((WEEKDAY( '2020-06-17' )) ) DAY)
+					LEFT OUTER JOIN ak_reports_weekly_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+			 GROUP BY s.student_id  ORDER BY address desc yang dibuat oleh do_action('report_page_reports_weekly'), WP_Hook->do_action, WP_Hook->apply_filters, report_weekly_page_handler, Report_Weekly_List->prepare_items, Report_Weekly_List->record_count
+[16-Jun-2020 23:32:58 UTC] Galat basis data WordPress Column 'address' in order clause is ambiguous untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						s.class_id  as class_id,
+						b.name  as branch_name,
+						c.name  as class_name,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_weekly r 
+						ON s.student_id = r.student_id AND r.date = ( '2020-06-17' - INTERVAL((WEEKDAY( '2020-06-17' )) ) DAY)
+					LEFT OUTER JOIN ak_reports_weekly_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+			 GROUP BY s.student_id  ORDER BY address desc LIMIT 20 OFFSET 0 yang dibuat oleh do_action('report_page_reports_weekly'), WP_Hook->do_action, WP_Hook->apply_filters, report_weekly_page_handler, Report_Weekly_List->prepare_items
+[16-Jun-2020 23:33:15 UTC] Galat basis data WordPress Column 'address' in order clause is ambiguous untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						s.class_id  as class_id,
+						b.name  as branch_name,
+						c.name  as class_name,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_weekly r 
+						ON s.student_id = r.student_id AND r.date = ( '2020-06-17' - INTERVAL((WEEKDAY( '2020-06-17' )) ) DAY)
+					LEFT OUTER JOIN ak_reports_weekly_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+			 GROUP BY s.student_id  ORDER BY address desc yang dibuat oleh do_action('report_page_reports_weekly'), WP_Hook->do_action, WP_Hook->apply_filters, report_weekly_page_handler, Report_Weekly_List->prepare_items, Report_Weekly_List->record_count
+[16-Jun-2020 23:33:15 UTC] Galat basis data WordPress Column 'address' in order clause is ambiguous untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						s.class_id  as class_id,
+						b.name  as branch_name,
+						c.name  as class_name,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_weekly r 
+						ON s.student_id = r.student_id AND r.date = ( '2020-06-17' - INTERVAL((WEEKDAY( '2020-06-17' )) ) DAY)
+					LEFT OUTER JOIN ak_reports_weekly_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+			 GROUP BY s.student_id  ORDER BY address desc LIMIT 20 OFFSET 0 yang dibuat oleh do_action('report_page_reports_weekly'), WP_Hook->do_action, WP_Hook->apply_filters, report_weekly_page_handler, Report_Weekly_List->prepare_items
+[14-Sep-2020 09:21:53 UTC] Galat basis data WordPress Column 'address' in order clause is ambiguous untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id  as class_id,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_daily r 
+						ON s.student_id = r.student_id AND r.date = '2020-09-14'
+					LEFT OUTER JOIN ak_reports_daily_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+		 WHERE s.name LIKE '%mikaeel%' AND s.class_id LIKE '%%' AND s.branch_id LIKE '%%'  GROUP BY s.student_id  ORDER BY address desc yang dibuat oleh do_action('toplevel_page_reports_daily'), WP_Hook->do_action, WP_Hook->apply_filters, report_daily_page_handler, Report_Daily_List->prepare_items, Report_Daily_List->record_count
+[14-Sep-2020 09:21:53 UTC] Galat basis data WordPress Column 'address' in order clause is ambiguous untuk kueri SELECT s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id  as class_id,
+						r.status as status_index,
+						MAX(CASE WHEN r.report_id IS NOT null THEN r.report_id ELSE NULL END) AS report_id,
+						MAX(CASE WHEN r.status IS NOT null THEN r.status ELSE NULL END) AS status,
+						MAX(CASE WHEN r.date IS NOT null THEN r.date ELSE NULL END) AS date 
+
+				FROM ak_students s 
+					LEFT OUTER JOIN ak_reports_daily r 
+						ON s.student_id = r.student_id AND r.date = '2020-09-14'
+					LEFT OUTER JOIN ak_reports_daily_score rs 
+						ON r.report_id = rs.report_id 
+					LEFT OUTER JOIN ak_parents_students ps 
+						ON s.student_id = ps.student_id
+					LEFT OUTER JOIN ak_branch b 
+						ON b.branch_id = s.branch_id
+					LEFT OUTER JOIN ak_class c 
+						ON c.class_id = s.class_id
+		 WHERE s.name LIKE '%mikaeel%' AND s.class_id LIKE '%%' AND s.branch_id LIKE '%%'  GROUP BY s.student_id  ORDER BY address desc LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_reports_daily'), WP_Hook->do_action, WP_Hook->apply_filters, report_daily_page_handler, Report_Daily_List->prepare_items
+[07-Jan-2021 03:42:57 UTC] Galat basis data WordPress Unknown column 's.name' in 'order clause' untuk kueri SELECT * FROM ak_payment GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 03:42:57 UTC] Galat basis data WordPress Unknown column 's.name' in 'order clause' untuk kueri SELECT * FROM ak_payment GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[07-Jan-2021 03:43:31 UTC] Galat basis data WordPress Unknown column 's.student_id' in 'field list' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id FROM ak_payment GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 03:43:31 UTC] Galat basis data WordPress Unknown column 's.student_id' in 'field list' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id FROM ak_payment GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[07-Jan-2021 03:44:40 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id...' at line 8 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id FROM 
+							FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE month(u.user_registered) <= month('2021-01-01 00:00:00') and year(u.user_registered) <= year('2021-01-01 00:00:00')
+						
+						 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 03:44:40 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id...' at line 8 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id FROM 
+							FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				WHERE month(u.user_registered) <= month('2021-01-01 00:00:00') and year(u.user_registered) <= year('2021-01-01 00:00:00')
+						
+						 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[07-Jan-2021 03:49:32 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/ WHERE month(u.user_registered) <= month('2021-01-01 00:00:00') and year(u.u...' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2021-01-01 00:00:00' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				// WHERE month(u.user_registered) <= month('2021-01-01 00:00:00') and year(u.user_registered) <= year('2021-01-01 00:00:00')
+		 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 03:49:32 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/ WHERE month(u.user_registered) <= month('2021-01-01 00:00:00') and year(u.u...' at line 24 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2021-01-01 00:00:00' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+				// WHERE month(u.user_registered) <= month('2021-01-01 00:00:00') and year(u.user_registered) <= year('2021-01-01 00:00:00')
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[07-Jan-2021 03:51:18 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id...' at line 10 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+					
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 03:51:18 UTC] Galat basis data WordPress You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id...' at line 10 untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+					
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month(CURRENT_DATE) AND year(p.period) = year(CURRENT_DATE)
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 60 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[07-Jan-2021 04:16:09 UTC] Galat basis data WordPress Unknown column 'ak_students.name' in 'on clause' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-01-01' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2020-01-01') AND year(p.period) = year('2020-01-01')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 AND ak_students.name LIKE '%Fazel Al Kahfi%' AND ak_students.number LIKE '%3%' AND ak_branch.class_id LIKE '%26%' AND p.status = '2'  GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 04:16:09 UTC] Galat basis data WordPress Unknown column 'ak_students.name' in 'on clause' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-01-01' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2020-01-01') AND year(p.period) = year('2020-01-01')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 AND ak_students.name LIKE '%Fazel Al Kahfi%' AND ak_students.number LIKE '%3%' AND ak_branch.class_id LIKE '%26%' AND p.status = '2'  GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[07-Jan-2021 04:17:11 UTC] Galat basis data WordPress Unknown column 'ak_students.name' in 'on clause' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-01-01' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2020-01-01') AND year(p.period) = year('2020-01-01')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 AND ak_students.name LIKE '%Fazel Al Kahfi%' AND ak_students.class_id LIKE '%3%' AND ak_branch.branch_id LIKE '%26%' AND p.status = '2'  GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 04:17:11 UTC] Galat basis data WordPress Unknown column 'ak_students.name' in 'on clause' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2020-01-01' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2020-01-01') AND year(p.period) = year('2020-01-01')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 AND ak_students.name LIKE '%Fazel Al Kahfi%' AND ak_students.class_id LIKE '%3%' AND ak_branch.branch_id LIKE '%26%' AND p.status = '2'  GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[07-Jan-2021 04:17:38 UTC] Galat basis data WordPress Unknown column 'ak_students.name' in 'on clause' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2021-01-07' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2021-01-07') AND year(p.period) = year('2021-01-07')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 AND ak_students.name LIKE '%Fazel%' AND ak_students.class_id LIKE '%%' AND ak_branch.branch_id LIKE '%%'  GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 04:17:38 UTC] Galat basis data WordPress Unknown column 'ak_students.name' in 'on clause' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2021-01-07' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2021-01-07') AND year(p.period) = year('2021-01-07')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 AND ak_students.name LIKE '%Fazel%' AND ak_students.class_id LIKE '%%' AND ak_branch.branch_id LIKE '%%'  GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items
+[07-Jan-2021 04:19:08 UTC] Galat basis data WordPress Unknown column 'ak_students.name' in 'on clause' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2021-01-07' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2021-01-07') AND year(p.period) = year('2021-01-07')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 AND ak_students.name LIKE '%Fazel%' AND s.class_id LIKE '%%' AND s.branch_id LIKE '%%'  GROUP BY s.student_id  ORDER BY s.name ASC  yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items, Payment_List->record_count
+[07-Jan-2021 04:19:08 UTC] Galat basis data WordPress Unknown column 'ak_students.name' in 'on clause' untuk kueri SELECT 	s.student_id as student_id,
+						s.name as name,
+						s.number as number,
+						s.branch_id as branch_id,
+						b.name as branch_name,
+						c.name as class_name,
+						s.class_id as class_id,
+						MAX(CASE WHEN p.payment_id IS NOT null THEN p.payment_id ELSE NULL END) AS payment_id,
+						MAX(CASE WHEN p.period  IS NOT null THEN p.period  ELSE DATE_FORMAT('2021-01-07' ,'%Y-%m-01')  END) AS period,
+						MAX(CASE WHEN p.status IS NOT null THEN p.status ELSE 0 END) AS status,
+						MAX(CASE WHEN p.image IS NOT null THEN p.status ELSE 0 END) AS image
+
+				FROM ak_students s 
+				LEFT OUTER JOIN ak_payment p 
+						ON s.student_id = p.student_id AND month(p.period) = month('2021-01-07') AND year(p.period) = year('2021-01-07')
+				LEFT OUTER JOIN ak_branch b 
+						ON s.branch_id = b.branch_id
+				LEFT OUTER JOIN ak_class c 
+						ON s.class_id = c.class_id
+				LEFT JOIN ak_parents_students ps
+						ON ps.student_id = s.student_id
+				LEFT JOIN ak_users u
+						ON u.ID = ps.parent_id
+			
+		 AND ak_students.name LIKE '%Fazel%' AND s.class_id LIKE '%%' AND s.branch_id LIKE '%%'  GROUP BY s.student_id  ORDER BY s.name ASC  LIMIT 20 OFFSET 0 yang dibuat oleh do_action('toplevel_page_payment'), WP_Hook->do_action, WP_Hook->apply_filters, payment_page_handler, Payment_List->prepare_items

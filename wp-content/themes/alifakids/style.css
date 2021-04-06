@@ -1,0 +1,482 @@
+/*
+Theme Name: Alifa Kids - LMS
+Theme URI: https://digidea.id
+Author: Digidea
+Author URI: https://digidea.id
+Description: Alifa Kids Learning Management System
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: alifakids
+*/
+
+.img-logo {
+  max-width: 200px
+}
+
+.navbar-brand {
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 200px;
+  margin-right: 0 !important;
+}
+
+.profile-header .profile-name h3 {
+  line-height: 1;
+}
+
+.profile-header .profile-name h5 {
+  color: #fff;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.profile-cover:after {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4));
+}
+
+.story-right {
+  float: right;
+}
+
+.login-page::before {
+  content: none;
+}
+
+.login-page .login-box {
+  position: static;
+}
+
+.file .file-icon {
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  line-height: 219px;
+}
+
+.file-options>a {
+  color: #fff;
+  text-shadow: 0px 0px 8px #000;
+}
+
+.mail-count {
+  line-height: 1;
+}
+
+.file-title {
+  display: block;
+  color: #384c6d;
+  font-weight: 500;
+}
+
+.material-icons.tiny {
+  font-size: 14px;
+}
+
+.material-icons.small {
+  font-size: 18px;
+}
+
+td.min {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.bootstrap-datetimepicker-widget tr:hover {
+  background-color: #808080;
+}
+
+.error-info {
+  position: static;
+  top: inherit;
+  transform: inherit;
+}
+
+.error-image {
+  position: static;
+  height: initial;
+  padding-top: 40%;
+}
+
+.error-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page-numbers {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: .25rem;
+}
+
+.page-numbers:first-child li {
+  margin-left: 0;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+.page-numbers li span,
+.page-numbers li a {
+  border-radius: 34px!important;
+  margin-right: 5px;
+}
+
+.page-numbers li span,
+.page-numbers li a {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.page-numbers li span,
+.page-numbers li a {
+  border: none;
+  background: #e6e6e6;
+  padding: 9px 15px;
+  color: #384c6d;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.page-numbers li span.current,
+.page-numbers li span:active,
+.page-numbers li span:focus,
+.page-numbers li span:hover,
+.page-numbers li a.current,
+.page-numbers li a:active,
+.page-numbers li a:focus,
+.page-numbers li a:hover {
+  border: none;
+  background: #037afb;
+  color: #fff;
+  outline: 0!important;
+  box-shadow: none!important;
+}
+
+.file-manager-menu>ul>li:not(.fmm-title):not(:last-child) {
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.attachment-post-thumbnail {
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-thumbnail {
+  margin-bottom: 20px;
+}
+
+.mail-text img {
+  max-width: 100%;
+}
+
+.file-title {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+.file.card-post-type .file-icon {
+  vertical-align: middle;
+  font-size: 48px;
+  text-align: center;
+  min-height: initial;
+  line-height: initial;
+}
+
+.file.card-post-type .file-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.file.pdf .file-info p {
+  color: #eb463f;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+img#frontend-image {
+  max-width: 480px;
+}
+
+nav:not(.pagination-with-number) .page-numbers:not(.prev),
+nav:not(.pagination-with-number) .page-numbers:not(.next) {
+  display: none;
+}
+
+nav:not(.pagination-with-number) .page-numbers.prev,
+nav:not(.pagination-with-number) .page-numbers.next {
+  display: inline;
+}
+
+.ms-container {
+  width: 100%;
+}
+
+.ms-header {
+  background-color: #ca4d9c;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  text-align: center;
+}
+
+.ms-container .ms-optgroup-label {
+  background-color: #f26e8a;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.ms-container .ms-list {
+  height: 360px;
+}
+
+.post-comments .post-comm img {
+  width: initial;
+  height: initial;
+  border-radius: initial;
+  float: initial;
+}
+
+.post-comments .post-comm img.comment-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  float: left;
+}
+
+.card.file.photo.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: .5;
+}
+
+.table .thead-purple th {
+  color: #fff;
+  background-color: #ca4d9c;
+  border-color: #ca4d9c;
+}
+
+.table .thead-pink th {
+  color: #fff;
+  background-color: #f26e8a;
+  border-color: #f26e8a;
+}
+
+#wpua-edit-5 {
+  display: flex;
+  flex-direction: column;
+}
+
+p#wpua-upload-button-existing {
+  order: 1;
+}
+
+#wpua-remove-button-existing {
+  display: none;
+}
+
+.wpua-edit p.submit {
+  order: 2;
+  text-align: right;
+}
+
+#wpua-file-existing {
+  margin-bottom: 10px;
+}
+
+#wpua-upload-existing {
+  display: none !important;
+}
+
+.wpua-edit #submit {
+  text-align: right;
+}
+
+#my-avatar #wpua-upload-messages-existing,
+#my-avatar #wpua-undo-button-existing {
+  display: none;
+}
+
+#my-avatar input:not(#wpua-file-existing),
+#my-avatar button {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.folder .folder-icon img {
+  max-width: 40px;
+  width: 100%;
+  transition: .3s all ease-in-out;
+}
+
+.folder .card-body div {
+  float: inherit;
+  align-items: inherit;
+  z-index: 1;
+}
+
+.folder .card-body {
+  display: flex;
+  align-items: center;
+}
+
+.folder .folder-name {
+  font-size: 1.35em;
+  font-weight: 600;
+}
+
+.card.folder {
+  color: initial;
+  transition: .3s all ease-in-out;
+}
+
+.card.folder.disabled {
+  opacity: .25;
+  background-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+.folder .card-body:after {
+  background: #FBD3E9;
+  background: -moz-linear-gradient(left, #BB377D 0%, #FBD3E9 51%, #BB377D 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #4eb3bf), color-stop(51%, #FBD3E9), color-stop(100%, #4eb3bf));
+  background: -webkit-linear-gradient(left, #BB377D 0%, #FBD3E9 51%, #0071b0 100%);
+  background: -o-linear-gradient(left, #BB377D 0%, #FBD3E9 51%, #BB377D 100%);
+  background: -ms-linear-gradient(left, #BB377D 0%, #FBD3E9 51%, #BB377D 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#BB377D), color-stop(51%, #FBD3E9), to(#BB377D));
+  background: -webkit-linear-gradient(left, #BB377D 0%, #FBD3E9 51%, #BB377D 100%);
+  background: linear-gradient(to right, #BB377D 0%, #FBD3E9 51%, #BB377D 100%);
+  background-size: 200% auto;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transition: .3s all ease-in-out;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  border-radius: 4px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.card.folder:not(.disabled):hover .card-body:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.card.folder .card-body .folder-bg {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  left: 0;
+  top: 0;
+  background-image: url(assets/images/class-bg.png);
+  background-repeat: no-repeat;
+  background-size: auto calc(100% - 20px);
+  background-position: right 20px top calc(100% - 10px);
+  z-index: 1;
+}
+
+.card.folder:not(.disabled):hover {
+  color: #fff;
+}
+
+.folder:not(.disabled):hover .folder-icon img {
+  filter: brightness(0) invert(1);
+}
+
+a.card.card-payment:hover {
+  background: #037afb;
+}
+
+a.card.card-payment .card-body .card-title,
+a.card.card-payment .card-body .profile-about-list li {
+  color: #000;
+}
+
+a.card.card-payment.card-selected {
+  background: #037afb;
+}
+
+a.card.card-selected.card-payment .card-body .card-title,
+a.card.card-selected.card-payment .card-body .profile-about-list li,
+a.card.card-payment:hover .card-body .card-title,
+a.card.card-payment:hover .card-body .profile-about-list li {
+  color: #fff;
+}

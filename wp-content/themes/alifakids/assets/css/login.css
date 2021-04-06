@@ -1,0 +1,80 @@
+#login h1 a,
+.login h1 a {
+  background-image: url('../images/logo.png');
+  max-width: 100%;
+  margin: 0 auto;
+  background-size: contain;
+  width: 100%;
+  background-position: center;
+  height: inherit;
+  padding-top: 34.25%;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.login h1 {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.login #backtoblog a:focus,
+.login #nav a:focus,
+.login h1 a:focus {
+  box-shadow: none;
+}
+
+body.login {
+  background: url(../images/login.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+#login {
+  width: 350px;
+}
+
+.login form {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(62, 85, 120, .045);
+}
+
+.wp-core-ui .button,
+.wp-core-ui .button-secondary {
+  color: #000;
+}
+
+.wp-core-ui .button-secondary:hover,
+.wp-core-ui .button.hover,
+.wp-core-ui .button:hover {
+  color: #000;
+}
+
+.login .button.wp-hide-pw:focus {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.wp-core-ui #wp-submit.button:hover {
+  color: #fff;
+}
+
+.wp-core-ui #wp-submit.button {
+  color: #fff;
+}
+
+p#backtoblog {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.login form .input,
+.login input[type=password],
+.login input[type=text] {
+  font-size: 14px;
+  padding: 10px 15px;
+}

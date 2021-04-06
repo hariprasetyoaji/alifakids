@@ -1,0 +1,141 @@
+.search-box input,
+.search-box select,
+.tablenav .search-plugins input,
+.tagsdiv .newtag {
+  float: left;
+  margin: 0 4px 0 0;
+}
+
+.search-box select {
+  box-shadow: 0 0 0 transparent;
+  border-radius: 4px;
+  border: 1px solid #7e8993;
+  background-color: #fff;
+  color: #32373c;
+  padding: 0 8px;
+  line-height: 2;
+  min-height: 30px;
+  min-width: 12em;
+}
+
+.column-fullname img {
+  float: left;
+  margin-right: 10px;
+  margin-top: 1px;
+}
+
+.form-table .ms-container {
+  width: 100%;
+}
+
+.form-table .ms-container .ms-list {
+  height: 256px;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.form-table .ms-container .ms-optgroup-label {
+  background-color: #f26e8a;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 6px 10px;
+  font-weight: 600;
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 1;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.badge.badge-primary {
+  color: #fff;
+  background: #037afb;
+}
+
+.badge.badge-secondary {
+  background: #e6e6e6;
+  color: #384c6d;
+}
+
+.badge.badge-success {
+  background: #06ba54;
+}
+
+.fixed .column-action {
+  width: 10%;
+}
+
+.ms-header {
+  background-color: #ca4d9c;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  text-align: center;
+}
+
+.birth-place-text {
+  width: 14em;
+}
+
+.birth-date-text {
+  width: 10em;
+}
+
+.course-report-item {
+  margin-bottom: 20px;
+}
+
+.course-report-item h3 {
+  margin: 0;
+  padding: 12px 18px;
+  font-size: 16px;
+}
+
+.course-report-title-wrapper {
+  border: 1px solid #e4e4e4;
+  background-color: #FAFAFA;
+  cursor: pointer;
+}
+
+.course-report-box {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #e4e4e4;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.course-report-option-wrapper {
+  margin-bottom: 20px;
+}
+
+.course-report-option-wrapper label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  vertical-align: top;
+  width: 30%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.course-report-option-field {
+  display: inline-block;
+  /* width: calc(100% - 205px); */
+  width: 65%;
+}
